@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="{{ url_for('static', filename='img/favicon.png') }}" rel="icon">
+
+	<!-- Google Fonts -->
+  	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+  	<!--CSS File -->
+  	<link href="{{ url_for('static', filename='lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+  	<!-- Libraries CSS Files -->
+  	<link href="{{ url_for('static', filename='lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+  	<link href="{{ url_for('static', filename='lib/animate/animate.min.css" rel="stylesheet') }}">
+  	<link href="{{ url_for('static', filename='lib/ionicons/css/ionicons.min.css" rel="stylesheet') }}">
+  	<link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet') }}">
+  	<link href="{{ url_for('static', filename='lib/lightbox/css/lightbox.min.css" rel="stylesheet') }}">
+
+  	<!-- Main Stylesheet File -->
+  	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<header id="header">
+    	<div class="container">
+      		<div class="logo float-left">
+        		<h1 class="text-light"><a href="/#intro" class="scrollto"><span>Farmer's Helper</span></a></h1>
+      		</div>
+
+	      	<!-- main-nav -->
+
+      		<nav class="main-nav float-right d-none d-lg-block">
+	        	<ul>
+			    	<li class="active"><a href="/#intro">Home</a></li>
+			        <li><a href="/#about">About Us</a></li>
+			        <li class="drop-down"><a href="/#services">Services</a>
+			    		<ul>
+	            			<li><a href="/services/Species">Species Recognition</a></li>
+	            			<li><a href="/services/disease">Disease Detection</a></li>
+	            			<li><a href="/services/weed">Weed Classification</a></li>
+	            			<li><a href="/services/yield">Crop Yield Prediction</a></li>
+	            		</ul>
+	          		</li>
+			        <li><a href="/blog">Blog</a></li>
+			        <li><a href="/#footer">Contact us</a></li>
+			        <li><a href="/userregister">Login</a></li>
+	        	</ul>
+      		</nav>
+    	</div>
+  	</header>
+  <!--==========================
+    Intro Section
+  ============================-->
+	<section id="intro" class="clearfix">
+		<div class="container d-flex h-100">
+			<div class="row justify-content-center align-self-center">
+        		<div class="col-md-10 intro-info order-md-first order-last">
+          			<h2>Welcome to our <span>Farm</span></h2>
+          			<div>
+            			<a href="#about" class="btn-get-started scrollto">Get Started</a>
+          			</div>
+        		</div>
+
+        		<div class="col-md-6 intro-img order-md-last order-first">
+          			<img src="img/intro-img.svg" alt="" class="img-fluid">
+        		</div>
+      		</div>
+
+	    </div>
+  	</section><!-- #intro -->
+
+  	<main id="main">
+
+    <!--==========================
+      About Us Section
+    ============================-->
+    	<section id="about">
+
+      		<div class="container">
+        		<div class="row">
+
+          			<div class="col-lg-5 col-md-4">
+            			<div class="about-img">
+              				<img src="{{ url_for('static', filename='img/1.jpg') }}" alt="">
+            			</div>
+          			</div>
+
+	          		<div class="col-lg-7 col-md-6">
+	            		<div class="about-content">
+	              			<h2>About Us</h2>
+	              				<p>Farmer’s Helper is a Artificial Intelligence system that provides various services to the farmers, gardeners, researchers, student, etc. This system has mainly four Functionality namely species recognition, disease detection, weed classification, and crop yield prediction. this system also provides a chatbot which can solve farmer's queries.</p>
+	              				<p>User can take pictures of a particular problem and upload it here, the system will analyze the problem and will result in a solution with details in hand.</p>
+	              				<ul>
+				                    <li><i class="ion-android-checkmark-circle"></i> Problem solving with higher accuracy with minimum time.</li>
+				                    <li><i class="ion-android-checkmark-circle"></i> Scalable, Accurate, and Inexpensive method to predict the result.</li>
+				                    <li><i class="ion-android-checkmark-circle"></i> Expert support for users queries.</li>
+	                  			</ul>
+	            		</div>
+	          		</div>
+        		</div>
+      		</div>
+
+    	</section><!-- #about -->
+
+
+    <!--==========================
+      Services Section
+    ============================-->
+		<section id="services" class="section-bg">
+    		<div class="container">
+
+	        	<header class="section-header">
+          			<h3>Services</h3>
+          		</header>
+
+		        <div class="row">
+
+          			<div class="col-md-8 col-lg-6 wow bounceInUp" data-wow-duration="1.4s">
+            			<div class="box">
+              				<div class="icon" style="background: #fceef3;"><i class="fa fa-leaf" style="color: #ff689b;"></i></div>
+              				<h4 class="title"><a href="/services/species_recognition">Species Recognition</a></h4>
+                			<p class="description">Want details about crop? Take a picture of crop and upload it here. You will get Name and details of that crop as output.</p>
+            			</div>
+          			</div>
+
+	          		<div class="col-md-8 col-lg-6 wow bounceInUp" data-wow-duration="1.4s">
+	            		<div class="box">
+	              			<div class="icon" style="background: #fff0da;"><i class="fa fa-flask" style="color: #e98e06;"></i></div>
+				            <h4 class="title"><a href="/services/disease_detection">Disease Detection</a></h4>
+	                		<p class="description">Farmer's helper can easily detect the disease in leaf or plant and provide the diagnosis solution for getting rid of it.</p>
+	            		</div>
+	          		</div>
+
+          			<div class="col-md-8 col-lg-6 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            			<div class="box">
+              				<div class="icon" style="background: #e6fdfc;"><i class="fa fa-pagelines" style="color: #3fcdc7;"></i></div>
+              				<h4 class="title"><a href="/services/weed_classification">Weed Classification</a></h4>
+                			<p class="description">Farmer's helper can easily classify between weed and provide the solution for getting rid of it.</p>
+            			</div>
+          			</div>
+
+          			<div class="col-md-8 col-lg-6 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            			<div class="box">
+              				<div class="icon" style="background: #eafde7;"><i class="fa fa-microchip" style="color:#41cf2e;"></i></div>
+              				<h4 class="title"><a href="/services/crop_yield_prediction">Crop Yield Prediction</a></h4>
+							<p class="description">Farmer's helper can help you to predict the Yield through remote sensing data and gives you an idea about the predicted Yield</p>
+            			</div>
+          			</div>
+        		</div>
+
+      		</div>
+    	</section><!-- #services -->
+
+    <!--==========================
+      Why Us Section
+    ============================-->
+    	<section id="why-us" class="wow fadeIn">
+      		<div class="container-fluid">
+
+       			<header class="section-header">
+          			<h3>Why choose us?</h3>
+          		</header>
+
+        		<div class="row">
+
+          			<div class="col-lg-6">
+            			<div class="why-us-img">
+              				<img src="{{ url_for('static', filename='img/why-us.jpg') }}" alt="" class="img-fluid">
+            			</div>
+          			</div>
+
+          			<div class="col-lg-6">
+            			<div class="why-us-content">
+              				<div class="features wow bounceInUp clearfix">
+                				<i class="fa fa-diamond" style="color: #f058dc;"></i>
+                				<h4>Mission</h4>
+               		 			<p>TO PROVIDE THE VARIOUS SERVICES TO FARMERS SO THEY CAN INCREASE THEIR YIELD WITH MINIMUM RESOURCES. THIS APPLICATION HELPS FARMERS TO UTILIZE HIS EFFORTS TO GET MORE OUTPUT AND MAKES HIS WORK SMARTER.</p>
+              				</div>
+
+              				<div class="features wow bounceInUp clearfix">
+                				<i class="fa fa-object-group" style="color: #ffb774;"></i>
+                				<h4>Why the need?</h4>
+                  				<p>ACCORDING TO THE UN FOOD AND AGRICULTURAL ORGANIZATION, THE GLOBAL POPULATION IS SET TO REACH 9.2 BILLION BY THE YEAR 2050. WITH AVAILABLE ESTIMATED AT ADDITIONAL 4%, IT SEEMS IT IS NO LONGER AN OPTION TO PLANT MORE CROP FIELDS.</p>
+              				</div>
+
+              				<div class="features wow bounceInUp clearfix">
+	                			<i class="fa fa-arrows" style="color: #589af1;"></i>
+	                			<h4>Goal</h4>
+	                  			<p>OUR GOAL IS TO HELP FARMERS TO INCREASE FOOD PRODUCTION BY 70% AND PROVIDE THEM AI SERVICES SO THEY CAN DO MORE WITH LESS.</p>
+              				</div>
+            			</div>
+          			</div>
+
+        		</div>
+
+      		</div>
+    	</section>
+
+    <!--==========================
+      Features Section
+    ============================-->
+    	<section id="features">
+      		<div class="container">
+      			<header class="section-header">
+          			<h3>Features</h3>
+          			<br>
+        		</header>
+        		<div class="row feature-item">
+          			<div class="col-lg-6 wow fadeInUp">
+            			<img src="{{ url_for('static', filename='img/feature1.jpg') }}" class="img-fluid" alt="">
+          			</div>
+          			<div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
+            			<h4>Species Recognition</h4>
+            			<p>There are hundreds of kinds of trees in the natural ecosystem, and it can be very difficult to distinguish between them. Botanists and those who study plants however, are able to identify the type of tree at a glance by using the characteristics of the leaf. Machine learning is used to automatically classify leaf types.
+            			</p>
+            			<p>Users can easily get details of species by taking pictures of it and upload it here. The system will result with the name and details of the species.
+            			</p>
+          			</div>
+        		</div>
+
+        		<div class="row feature-item mt-5 pt-5">
+          			<div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
+            			<img src="{{ url_for('static', filename='img/feature2.jpg') }}" class="img-fluid" alt="">
+          			</div>
+
+          			<div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
+            			<h4>Disease Detection</h4>
+            			<p>Crop diseases are a major threat to food security, but their rapid identification remains difficult in many parts of the world due to the lack of the necessary infrastructure. The combination of increasing global smartphone penetration and recent advances in computer vision made possible by deep learning has paved the way for disease diagnosis.
+            			</p>
+            			<p>Every disease, pest and deficiency leaves behind a specific pattern. Farmer's Helper recognizes these patterns. One photo is enough and you know what your plant is missing.
+            			</p>
+          			</div>
+        		</div>
+        		<br><br>
+        		<div class="row feature-item">
+          			<div class="col-lg-6 wow fadeInUp">
+            			<img src="{{ url_for('static', filename='img/feature3.png') }}" class="img-fluid" alt="">
+          			</div>
+          			<div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
+            			<h4>Weed Classification</h4>
+            			<p>Our system can discriminate crop and weed plants growing in commercial fields where crop and weed grow close together and handles overlap between plants. Automated crop / weed discrimination enables weed control strategies with specific treatment of weeds to save cost and mitigate environmental impact.
+            			</p>
+            			<p>Users can easily classify between weed by taking pictures of it and upload it here. The system will classify correctly with higher accuracy and provide a solution to get rid of it.
+            			</p>
+          			</div>
+        		</div>
+        		<div class="row feature-item mt-5 pt-5">
+          			<div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
+            			<img src="{{ url_for('static', filename='img/feature4.jpg') }}" class="img-fluid" alt="">
+          			</div>
+
+			        <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
+            			<h4>Crop Yield Prediction</h4>
+            			<p>This system introduce a scalable, accurate, and inexpensive method to predict crop yields using publicly available remote sensing data.
+            			</p>
+            			<p>Remote sensing data are globally available and relatively inexpensive. It is frequently used in computational sustainability applications.
+            			</p>
+          			</div>
+        		</div>
+      		</div>
+    	</section><!-- #about -->
+	</main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  	<footer id="footer" class="section-bg">
+    	<div class="footer-top">
+      		<div class="container">
+        		<div class="row">
+          			<div class="col-lg-6">
+            			<div class="row">
+                			<div class="col-sm-6">
+                  				<div class="footer-info">
+                    				<h3>Farmer's Helper</h3>
+                    				<p>Farmer’s Helper is a Artificial Intelligence system that provides various services to the farmers, gardeners, researchers, student, etc. This system has mainly four Functionality namely species recognition, disease detection, weed classification, and crop yield prediction. this system also provides a chatbot which can solve farmer's queries.</p>
+                  				</div>
+
+                  				<div class="footer-newsletter">
+                    				<h4>Our Newsletter</h4>
+                    				<p>Subscribe to our newsletter to get notified to our latest updates.</p>
+                    				<form action="/newsletter" method="post">
+                      					<input type="email" name="email"><input type="submit"  value="Subscribe">
+                    				</form>
+                  				</div>
+			                </div>
+
+                			<div class="col-sm-6">
+                  				<div class="footer-links">
+                    				<h4>Useful Links</h4>
+                    				<ul>
+                      					<li><a href="/">HOME</a></li>
+                      					<li><a href="#about">ABOUT US</a></li>
+					                    <li><a href="#services">SERVICES</a></li>
+					                    <li><a href="/blog">BLOG</a></li>
+					                    <li><a href="#contact">CONTACT US</a></li>
+                    				</ul>
+                  				</div>
+
+                  				<div class="footer-links">
+                    				<h4>Contact Us</h4>
+                    				<p>Ahmedabad<br>
+                      				Gujarat<br>
+                                    India<br>
+                      					<strong>Phone:</strong> +91 9876543210<br>
+                      					<strong>Email:</strong> info@example.com<br>
+                    				</p>
+                  				</div>
+                			</div>
+            			</div>
+          			</div>
+          			<div class="col-lg-6">
+            			<div class="form">
+              				<h4>Send us a message</h4>
+              				<p>To help us improve, we'd like to ask you to give feedback about your experience so far.</p>
+              				<form action="/contact" method="POST">
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                    <div class="validation"></div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                    <div class="validation"></div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                    <div class="validation"></div>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                                    <div class="validation"></div>
+                                </div>
+                                <div class="text-center">
+                                    <input type="submit" title="Send Message /">
+                                </div>
+                            </form>
+            			</div>
+          			</div>
+        		</div>
+      		</div>
+    	</div>
+    	<div class="container">
+      		<div class="copyright">
+        		&copy; Copyright <strong>Farmer's Helper</strong>. All Rights Reserved
+      		</div>
+      		<div class="credits"></div>
+    	</div>
+  	</footer><!-- #footer -->
+
+  	<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  	<!-- Uncomment below i you want to use a preloader -->
+  	<!-- <div id="preloader"></div> -->
+	<script src="{{ url_for('static', filename='lib/jquery/jquery.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/jquery/jquery-migrate.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/easing/easing.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/mobile-nav/mobile-nav.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/wow/wow.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/waypoints/waypoints.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/counterup/counterup.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/isotope/isotope.pkgd.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/lightbox/js/lightbox.min.js') }}"></script>
+  	<!-- Contact Form JavaScript File -->
+  	<script src="{{ url_for('static', filename='contactform/contactform.js') }}"></script>
+  	<!-- Template Main Javascript File -->
+  	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	</body>
+</html>

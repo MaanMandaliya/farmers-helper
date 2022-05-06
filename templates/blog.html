@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+{% block content %}
+<html lang="en">
+<br><br><br>
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/intro-bg.jpg') }}')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-10 mx-auto">
+            <div class="site-heading"><br><br><br>
+              <h1 style="font-size:70px">{{params['blog_name']}}</h1>
+                <h1 style="font-size:40px"><span class="subheading">{{params['tag_line']}}</span></h1>
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+
+<br>
+
+     {% for post in posts %}
+          <div class="post-preview">
+            <a href="/post/{{post.slug}}">
+              <h2 class="post-title">{{ post.title }}
+
+              </h2>
+              <h3 class="post-subtitle">
+                {{post.tagline}}
+              </h3>
+            </a>
+            <p class="post-meta">Posted by
+              <a href="#">Admin</a>
+              on {{post.date}}</p>
+          </div>
+
+          {{post.content[0:143]|safe}}...
+          <hr>
+</li></a>
+          {% endfor %}
+
+
+          <!-- Pager -->
+          <div class="clearfix">
+
+
+          	<a class="btn btn-primary float-left" href="{{prev}}"> &larr;Previous</a>
+            <a class="btn btn-primary float-right" href="{{next}}">Next &rarr;</a><br><br><br><br><br><br><br><br><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='lib/jquery/jquery.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/jquery/jquery-migrate.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/easing/easing.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/mobile-nav/mobile-nav.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/wow/wow.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/waypoints/waypoints.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/counterup/counterup.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/isotope/isotope.pkgd.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/lightbox/js/lightbox.min.js') }}"></script>
+  	<!-- Contact Form JavaScript File -->
+  	<script src="{{ url_for('static', filename='contactform/contactform.js') }}"></script>
+  	<!-- Template Main Javascript File -->
+  	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% if title %}
+		<title>{{ title }} - Farmer's Helper</title>
+	{% else %}
+    	<title>Welcome to Farmer's Helper</title>
+    {% endif %}
+    <meta charset="utf-8">
+  	<title>Farmer's Helper</title>
+  	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+  	<meta content="" name="keywords">
+  	<meta content="" name="description">
+
+  	<!-- Favicons -->
+  	<link href="{{ url_for('static', filename='img/favicon.png') }}" rel="icon">
+
+	<!-- Google Fonts -->
+  	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+  	<!--CSS File -->
+  	<link href="{{ url_for('static', filename='lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+  	<!-- Libraries CSS Files -->
+  	<link href="{{ url_for('static', filename='lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+  	<link href="{{ url_for('static', filename='lib/animate/animate.min.css" rel="stylesheet') }}">
+  	<link href="{{ url_for('static', filename='lib/ionicons/css/ionicons.min.css" rel="stylesheet') }}">
+  	<link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet') }}">
+  	<link href="{{ url_for('static', filename='lib/lightbox/css/lightbox.min.css" rel="stylesheet') }}">
+
+  	<!-- Main Stylesheet File -->
+  	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  	<!--Header-->
+  	<header id="header">
+    	<div class="container">
+      		<div class="logo float-left">
+        		<h1 class="text-light"><a href="/#intro" class="scrollto"><span>Farmer's Helper</span></a></h1>
+      		</div>
+
+	      	<!-- main-nav -->
+
+      		<nav class="main-nav float-right d-none d-lg-block">
+	        	<ul>
+			    	<li class="active"><a href="/#intro">Home</a></li>
+			        <li><a href="/#about">About Us</a></li>
+			        <li class="drop-down"><a href="/#services">Services</a>
+			    		<ul>
+	            			<li><a href="/services/Species">Species Recognition</a></li>
+	            			<li><a href="/services/disease">Disease Detection</a></li>
+	            			<li><a href="/services/weed">Weed Classification</a></li>
+	            			<li><a href="/services/yield">Crop Yield Prediction</a></li>
+	            		</ul>
+	          		</li>
+			        <li><a href="/blog">Blog</a></li>
+			        <li><a href="/#footer">Contact us</a></li>
+			        <li><a href="/userlogin">Login</a></li>
+	        	</ul>
+      		</nav>
+    	</div>
+  	</header>
+</head>
+<body>
+{% block content %}
+
+{% endblock %}
+</body>
+</html>

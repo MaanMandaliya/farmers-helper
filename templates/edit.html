@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+
+
+    <!-- Page Header --><br><br><br>
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/intro-bg.jpg') }}')">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-10 mx-auto">
+                    <div class="site-heading"><br><br><br>
+                        <h1 style="font-size:70px">Admin Panel</h1>
+                        <span class="subheading" style="font-size:40px">Manage your posts and change them</span><br><br><br><br><br><br><br><br><br><br><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto"><br>
+                <h1>Basic Actions</h1>
+                <a href="/dashboard">  <button class="btn btn-primary"> Dashboard Home</button></a>
+                <a href="/logout">  <button class="btn btn-primary"> Logout</button></a>
+                <hr>
+                <h1>Add/Edit Post</h1>
+                <form name="sentMessage" id="contactForm" action = "/edit/{{sno}}" method="post" novalidate>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Title</label>
+                            <input type="text" class="form-control" placeholder="Title" id="title" name='title' required data-validation-required-message="Please enter your name." value="{{post.title}}">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Tagline</label>
+                            <input type="text" class="form-control" placeholder="Tagline" id="tline" name="tline" required data-validation-required-message="Please enter your email address." value="{{post.tagline}}">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Slug</label>
+                            <input type="text" class="form-control" placeholder="Slug" name="slug" id="slug" required data-validation-required-message="Please enter your phone number." value="{{post.slug}}">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>content</label>
+
+                            <!-- this is new edited area-->
+
+
+
+                            <!-- edited area finish-->
+
+                            <textarea rows="5" class="form-control" placeholder="Content" name = "content" id="ckeditor" required data-validation-required-message="Please enter a message.">{{post.content}}</textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <!--<div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Image File</label>
+                            <input class="form-control" placeholder="Image Filename" name = "img_file" id="img_file" value="{{post.img_file}}">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>-->
+                    <br>
+                    <div id="success"></div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary" id="sendMessageButton">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="{{ url_for('static', filename='lib/jquery/jquery.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/jquery/jquery-migrate.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/easing/easing.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/mobile-nav/mobile-nav.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/wow/wow.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/waypoints/waypoints.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/counterup/counterup.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/isotope/isotope.pkgd.min.js') }}"></script>
+  	<script src="{{ url_for('static', filename='lib/lightbox/js/lightbox.min.js') }}"></script>
+  	<!-- Contact Form JavaScript File -->
+  	<script src="{{ url_for('static', filename='contactform/contactform.js') }}"></script>
+  	<!-- Template Main Javascript File -->
+  	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <!--<script src="//cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>-->
+    <script src="//cdn.ckeditor.com/4.13.0/full/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('ckeditor');
+    </script>
+{% endblock %}

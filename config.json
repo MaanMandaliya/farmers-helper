@@ -1,0 +1,17 @@
+{
+  "params":
+  {
+    "local_server":"True",
+    "local_uri": "mysql://root:@localhost/codingthunder",
+    "prod_uri":"mysql://root:@localhost/codingthunder",
+    "blog_name": "Farmer's Helper",
+    "tag_line": "Be part of your nature",
+    "gmail-user":"thefarmerhelper@gmail.com",
+    "gmail-password":"farmer@123",
+    "no_of_posts": 3,
+    "admin_user":"dhruv",
+    "admin_password": "dhruv@123",
+    "upload_location": "C:\\Users\\dhruv\\Desktop\\Don't Touch It\\Farmer's Helper\\static\\upload"
+  }
+
+}
